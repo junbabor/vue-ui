@@ -1,0 +1,121 @@
+@import 'common/var';
+.v-button {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 20px;
+    line-height: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    &:hover {
+        background-color: mix($color-white, $color-primary, 90%);
+        border-color: mix($color-white, $color-primary, 70%);
+        color: $color-primary;
+    }
+
+    &.v-button-primary {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        color: #fff;
+        &:hover {
+            background-color: $color-primary-light;
+            border-color: $color-primary-light;
+        }
+        &.is-disabled:hover {
+            background-color: $color-primary;
+            border-color: $color-primary;
+            color: #fff;
+        }
+    }
+    &.v-button-success {
+        background-color: $color-success;
+        border-color: $color-success;
+        color: #fff;
+        &:hover {
+            background-color: $color-success-light;
+            border-color: $color-success-light;
+        }
+        &.is-disabled:hover {
+            background-color: $color-success;
+            border-color: $color-success;
+            color: #fff;
+        }
+    }
+    &.v-button-danger {
+        background-color: $color-danger;
+        border-color: $color-danger;
+        color: #fff;
+        &:hover {
+            background-color: $color-danger-light;
+            border-color: $color-danger-light;
+        }
+        &.is-disabled:hover {
+            background-color: $color-danger;
+            border-color: $color-danger;
+            color: #fff;
+        }
+    }
+    &.v-button-warning {
+        background-color: $color-warning;
+        border-color: $color-warning;
+        color: #fff;
+        &:hover {
+            background-color: $color-warning-light;
+            border-color: $color-warning-light;
+        }
+        &.is-disabled:hover {
+            background-color: $color-warning;
+            border-color: $color-warning;
+            color: #fff;
+        }
+    }
+    &.v-button-info {
+        background-color: $color-info;
+        border-color: $color-info;
+        color: #fff;
+        &:hover {
+            background-color: $color-info-light;
+            border-color: $color-info-light;
+        }
+        &.is-disabled:hover {
+            background-color: $color-info;
+            border-color: $color-info;
+            color: #fff;
+        }
+    }
+    &.is-disabled {
+        cursor: not-allowed;
+        opacity: .5;
+        &:hover {
+            background-color: #fff;
+            border-color: #ddd;
+            color: #666;
+        }
+    }
+
+    &.is-round {
+        border-radius: 20px;
+    }
+}
+.v-button-medium {
+    padding: 10px 20px;
+}
+.v-button-small {
+    padding: 9px 15px;
+}
+.v-button-mini {
+    padding: 7px 15px;
+}
+
+
+.v-button + .v-button {
+    margin-left: 10px;
+}

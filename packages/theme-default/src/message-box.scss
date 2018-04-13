@@ -1,0 +1,87 @@
+@import 'common/var';
+.message-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+.msgbox-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+.message-box-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+.msgbox-title {
+    position: relative;
+    padding: 15px;
+    padding-bottom: 10px;
+    span {
+        font-size: 18px;
+    }
+    i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 18px;
+        cursor: pointer;
+        color: #666;
+        &:hover {
+            color: $color-hover;
+        }
+    }
+}
+.msgbox-content {
+    position: relative;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+.msgbox-btns {
+    padding: 15px;
+}
+
+
+
+
+
+.msgbox-fade-enter-active {
+    animation: msgbox-fade-in .3s;
+}
+
+.msgbox-fade-leave-active {
+    animation: msgbox-fade-out .3s;
+}
+
+@keyframes msgbox-fade-in {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes msgbox-fade-out {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+}

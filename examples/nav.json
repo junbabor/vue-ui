@@ -1,0 +1,46 @@
+{
+    "navs": [
+        {
+            "title": "开发指南",
+            "children": [
+                { "title": "介绍", "name": "giud", "path": "/giud" }
+            ]
+        },
+        {
+            "title": "组件",
+            "children": [
+                {
+                    "title": "基础组件",
+                    "name": "basic",
+                    "children": [
+                        { "title": "Icon 图标", "name": "icon", "path": "/icon"},
+                        { "title": "Button 按钮", "name": "button", "path": "/button"}
+                    ]
+                },
+                {
+                    "title": "表单组件",
+                    "name": "form",
+                    "children": [
+                        { "title": "radio", "name": "radio", "path": "/radio"},
+                        { "title": "checkbox", "name": "checkbox", "path": "/checkbox"}
+                    ]
+                },
+                {
+                    "title": "数据组件",
+                    "name": "data",
+                    "children": [
+                        { "title": "Pagination 分页", "name": "pagination", "path": "/pagination"}
+                    ]
+                },
+                {
+                    "title": "其他组件",
+                    "name": "other",
+                    "children": [
+                        { "title": "MessageBox 弹框", "name": "MessageBox", "path": "/MessageBox"},
+                        { "title": "Tab 选项卡", "name": "Tab", "path": "/Tab"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+@import 'common/var';
+.v-checkbox {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    user-select: none;
+}
+.v-checkbox + .v-checkbox {
+    margin-left: 30px;
+}
+.v-checkbox-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    line-height: 1;
+    vertical-align: middle;
+}
+.v-checkbox-ipt {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    outline: none;
+}
+.v-checkbox-inner {
+    position: relative;
+    line-height: 1;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #dcdfe6;
+    display: inline-block;
+    box-sizing: border-box;
+    &:after {
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        content: "";
+        box-sizing: content-box;
+        width: 3px;
+        height: 7px;
+        border: 1px solid #fff;
+        border-left: 0;
+        border-top: 0;
+        transform: rotate(45deg) scaleY(0);
+        transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+        transform-origin: center;
+    }
+}
+.v-checkbox-label {
+    padding-left: 24px;
+    font-size: 14px;
+}
+.v-checkbox.is-checked {
+    .v-checkbox-inner {
+        border-color: $color-primary;
+        background: $color-primary;
+        &:after {
+            transform: rotate(45deg) scaleY(1);
+        }
+    }
+    .v-checkbox-label {
+        color: $color-primary;
+    }
+}
+
+.v-checkbox.is-disabled {
+    .v-checkbox-inner {
+        background-color: #f5f7fa;
+        border-color: #e4e7ed;
+        cursor: not-allowed;
+        &:after {
+            border-color: #c0c4cc;
+        }
+    }
+    .v-checkbox-label {
+        color: #ccc;
+        cursor: not-allowed;
+    }
+}
+
+.is-focus .v-checkbox-inner {
+    border-color: $color-primary;
+}
